@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Concept Mobilya Admin</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <style>
+      :root{--bg:#f4f1eb;--panel:#fffdfa;--ink:#171512;--muted:#746d63;--line:rgba(0,0,0,.11);--dark:#151515;--gold:#a58456;--green:#168455;--red:#a33b32}
+      *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Avenir Next,Manrope,system-ui,sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer}
+      .shell{min-height:100vh;display:grid;grid-template-columns:280px minmax(0,1fr)}aside{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;background:#151515;color:#f4f1eb;padding:24px 18px}.brand{font-family:Georgia,serif;font-size:25px;font-weight:700}.sub{margin:6px 0 22px;color:rgba(244,241,235,.58);font-size:12px;line-height:1.5}.nav{display:grid;gap:8px}.nav button{border:1px solid rgba(244,241,235,.12);border-radius:8px;background:transparent;color:inherit;padding:12px 13px;text-align:left;font-weight:750}.nav button.active{background:#f4f1eb;color:#151515}.side-meta{margin-top:auto;border-top:1px solid rgba(244,241,235,.12);padding-top:16px;color:rgba(244,241,235,.55);font-size:12px;line-height:1.55}.side-exit{margin-top:14px;border:1px solid rgba(255,255,255,.16);border-radius:8px;background:#a33b32;color:#fff;padding:12px 13px;font-weight:800;text-align:left}.main{padding:28px 34px 60px}.top{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:22px}.top h1{margin:0;font-family:Georgia,serif;font-size:42px}.eyebrow{margin:0 0 6px;color:var(--gold);font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.btn{border:1px solid var(--line);border-radius:999px;background:var(--panel);padding:10px 14px;font-weight:700;color:var(--ink)}.btn.dark{background:var(--dark);color:#f4f1eb}.btn.good{background:var(--green);color:#fff;border-color:transparent}.btn.danger{background:var(--red);color:#fff;border-color:transparent}.status{margin:0 0 18px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.55);padding:12px 14px;color:var(--muted);font-size:13px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}.stat{border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:16px;box-shadow:0 14px 34px rgba(0,0,0,.05)}.stat strong{display:block;font-size:30px}.stat span{font-size:12px;color:var(--muted)}
+      .workspace{display:grid;grid-template-columns:minmax(0,.92fr) minmax(360px,.58fr);gap:18px;align-items:start}.panel{border:1px solid var(--line);border-radius:8px;background:var(--panel);box-shadow:0 18px 50px rgba(0,0,0,.06);overflow:hidden}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 16px;border-bottom:1px solid var(--line)}.panel-head h2{margin:0;font-size:18px}.list{display:grid;gap:10px;padding:14px;max-height:calc(100vh - 260px);overflow:auto}.item{display:grid;grid-template-columns:86px minmax(0,1fr) auto;gap:12px;align-items:center;border:1px solid var(--line);border-radius:8px;background:rgba(244,241,235,.48);padding:10px}.item.no-image{grid-template-columns:minmax(0,1fr) auto}.thumb{width:86px;height:66px;border-radius:6px;object-fit:cover;background:#ddd}.item h3{margin:0;font-size:15px}.item p{margin:5px 0 0;color:var(--muted);font-size:12px;line-height:1.45}.item-actions{display:flex;gap:6px}.iconbtn{width:36px;height:36px;border:1px solid var(--line);border-radius:999px;background:#fff}.off{opacity:.45}.form{padding:16px;display:grid;gap:12px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:grid;gap:6px}.field label{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;font-weight:800;color:#4d463e}.field input,.field textarea,.field select{width:100%;border:1px solid var(--line);border-radius:8px;background:#fff;padding:10px;color:var(--ink)}textarea{min-height:130px;resize:vertical}.check{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px}.preview{width:100%;max-height:220px;object-fit:cover;border:1px solid var(--line);border-radius:8px;background:#ddd}.help{font-size:12px;line-height:1.55;color:var(--muted);margin:0}.counter{font-size:11px;font-weight:700;color:var(--muted)}.counter.good{color:var(--green)}.counter.warn{color:var(--red)}.seo-preview{grid-column:1/-1;border:1px solid rgba(0,0,0,.11);border-radius:8px;background:#fff;padding:13px 14px}.seo-preview small{display:block;color:#168455;font-size:12px;line-height:1.45;overflow-wrap:anywhere}.seo-preview strong{display:block;margin-top:5px;color:#1a0dab;font-size:17px;font-weight:600;line-height:1.3}.seo-preview p{margin:5px 0 0;color:#4d5156;font-size:13px;line-height:1.45}.login-screen{min-height:100vh;display:grid;place-items:center;padding:24px;background:radial-gradient(circle at 50% 0,rgba(165,132,86,.16),transparent 34%),var(--bg)}.login-card{width:min(420px,100%);border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:28px;box-shadow:0 24px 76px rgba(0,0,0,.09)}.login-card h1{margin:0;font-family:Georgia,serif;font-size:38px}.login-card p{margin:8px 0 20px;color:var(--muted);line-height:1.55}.login-card .btn{width:100%;justify-content:center}.auth-error{min-height:18px;margin:10px 0 0;color:var(--red);font-size:13px;font-weight:700}.hidden{display:none!important}
+      .dashboard{display:grid;grid-template-columns:minmax(0,.85fr) minmax(340px,.5fr);gap:18px;align-items:start}.overview{padding:18px}.overview h2,.quick-card h2{margin:0 0 8px;font-size:20px}.overview p,.quick-card p{margin:0;color:var(--muted);line-height:1.6}.area-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}.area-card{border:1px solid var(--line);border-radius:8px;background:rgba(244,241,235,.5);padding:14px}.area-card strong{display:block;font-size:15px}.area-card span{display:block;margin-top:6px;color:var(--muted);font-size:12px;line-height:1.5}.quick-card{padding:18px}.quick-list{display:grid;gap:10px;margin-top:14px}.quick-row{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.62);padding:12px}.quick-row button{white-space:nowrap}.save-note{border:1px solid rgba(22,132,85,.22);border-radius:8px;background:rgba(22,132,85,.07);padding:13px;color:#236247;font-size:12px;line-height:1.55}.empty-note{padding:14px;color:var(--muted);font-size:13px}.section-note{border:1px solid var(--line);border-radius:8px;background:rgba(244,241,235,.5);padding:12px;color:var(--muted);font-size:12px;line-height:1.55}
+      @media(max-width:980px){.shell{grid-template-columns:1fr}aside{position:relative;height:auto}.workspace,.dashboard,.stats,.area-grid{grid-template-columns:1fr}.top{align-items:flex-start;flex-direction:column}}
+    </style>
+  </head>
+  <body>
+    <section class="login-screen" id="loginScreen">
+      <form class="login-card" id="loginForm">
+        <h1>Admin Girişi</h1>
+        <p>Concept Mobilya içerik paneline devam etmek için şifre gir.</p>
+        <div class="field"><label for="loginPassword">Şifre</label><input id="loginPassword" name="password" type="password" autocomplete="current-password" autofocus></div>
+        <button class="btn good" type="submit">Giriş Yap</button>
+        <div class="auth-error" id="loginError" role="alert"></div>
+      </form>
+    </section>
+    <div class="shell hidden" id="adminShell">
+      <aside>
+        <div class="brand">concept mobilya</div>
+        <p class="sub">İçerik yönetim paneli. Görsel, blog ve yorumları buradan düzenle.</p>
+        <nav class="nav" aria-label="Admin menü">
+          <button class="active" data-tab="dashboard">Dashboard</button>
+          <button data-tab="heroSlides">Ana Slider</button>
+          <button data-tab="projects">Görseller / Projeler</button>
+          <button data-tab="blogPosts">Blog Yazıları</button>
+          <button data-tab="reviews">Google Yorumları</button>
+          <button data-tab="settings">Ayarlar</button>
+        </nav>
+        <div class="side-meta">admin paneli<br>Concept Mobilya içerik sistemi</div>
+        <button class="side-exit" id="sidebarLogout" type="button">Çıkış Yap</button>
+      </aside>
+      <main class="main">
+        <div class="top">
+          <div><p class="eyebrow">Yönetim Paneli</p><h1 id="pageTitle">Dashboard</h1><p class="help" id="pageHelp">Görselleri, blog yazılarını ve Google yorumlarını buradan düzenle.</p></div>
+          <button class="btn good" id="globalSave" type="button">Tüm değişiklikleri kaydet</button>
+        </div>
+        <p class="status" id="status">İçerik yükleniyor...</p>
+        <section class="stats">
+          <div class="stat"><strong id="heroCount">0</strong><span>aktif slider görseli</span></div>
+          <div class="stat"><strong id="projectCount">0</strong><span>aktif proje görseli</span></div>
+          <div class="stat"><strong id="blogCount">0</strong><span>aktif blog yazısı</span></div>
+          <div class="stat"><strong id="reviewCount">0</strong><span>aktif Google yorumu</span></div>
+        </section>
+        <section class="dashboard" id="dashboardPanel">
+          <div class="panel">
+            <div class="panel-head"><h2>Genel Bakış</h2></div>
+            <div class="overview">
+              <h2>Site içerikleri tek panelden yönetiliyor</h2>
+              <p>Bu panel BGC Nakliyat’taki dashboard mantığıyla çalışır: önce alanı seç, içeriği düzenle, sonra kaydet. Görsel yüklemede tarayıcı site klasörüne izin ister.</p>
+              <div class="area-grid">
+                <div class="area-card"><strong>Ana Slider</strong><span>Ana sayfanın hero bölümünde dönen büyük görseller burada değişir.</span></div>
+                <div class="area-card"><strong>Görseller / Projeler</strong><span>Ana sayfadaki tamamlanan projeler kartlarını ve görsellerini yönetir.</span></div>
+                <div class="area-card"><strong>Blog Yazıları</strong><span>Ana sayfa blog kartları, blog liste sayfası ve SEO uyumlu blog detayları buradan düzenlenir.</span></div>
+                <div class="area-card"><strong>Google Yorumları</strong><span>Ana sayfadaki kayan yorum şeridinde görünen müşteri yorumlarını yönetir.</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><h2>Hızlı İşlemler</h2></div>
+            <div class="quick-card">
+              <p class="save-note">Kaydetme sırasında site klasörünü seçersen panel `data/site-content.json` dosyasını günceller. Blog yazıları için ilgili statik sayfa da oluşturulur.</p>
+              <div class="quick-list">
+                <div class="quick-row"><span>Ana slider görseli değiştir</span><button class="btn" type="button" data-jump="heroSlides">Aç</button></div>
+                <div class="quick-row"><span>Yeni blog yazısı ekle</span><button class="btn" type="button" data-jump="blogPosts">Aç</button></div>
+                <div class="quick-row"><span>Google yorumu düzenle</span><button class="btn" type="button" data-jump="reviews">Aç</button></div>
+                <div class="quick-row"><span>Admin şifresi değiştir</span><button class="btn" type="button" data-jump="settings">Aç</button></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="workspace hidden" id="workspacePanel">
+          <div class="panel">
+            <div class="panel-head"><h2 id="listTitle">İçerikler</h2><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" id="saveChanges" type="button">Değişiklikleri Kaydet</button><button class="btn dark" id="newItem" type="button">Yeni ekle</button></div></div>
+            <div class="list" id="list"></div>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><h2 id="formTitle">Düzenle</h2><button class="btn" id="resetForm">Temizle</button></div>
+            <form class="form" id="editor"></form>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      const contentUrl = "/data/site-content.json";
+      const defaultPasswordHash = "122f51af686b46c88122e03bd8ca568ac2cab408aa2094dc95f1f87f4a7fd6b4";
+      const tabs = {
+        dashboard: { label: "Dashboard", singular: "dashboard", help: "Site içeriklerini ve hızlı işlemleri tek ekrandan takip et." },
+        heroSlides: { label: "Ana Slider", singular: "slider görseli" },
+        projects: { label: "Görseller / Projeler", singular: "proje" },
+        blogPosts: { label: "Blog Yazıları", singular: "blog yazısı" },
+        reviews: { label: "Google Yorumları", singular: "yorum" },
+        settings: { label: "Ayarlar", singular: "ayar" }
+      };
+      const tabHelp = {
+        dashboard: "Site içeriklerini ve hızlı işlemleri tek ekrandan takip et.",
+        heroSlides: "Ana sayfanın hero slider görsellerini buradan değiştir.",
+        projects: "Ana sayfadaki tamamlanan proje kartlarını buradan düzenle.",
+        blogPosts: "SEO uyumlu blog yazılarını, başlıkları ve detay sayfalarını buradan yönet.",
+        reviews: "Google yorumlarını doğal metin olarak buraya yaz; site kayan şeritte gösterir.",
+        settings: "Admin giriş şifresini değiştir ve oturumu kapat."
+      };
+      let activeTab = "dashboard";
+      let editIndex = -1;
+      let state = { heroSlides: [], projects: [], blogPosts: [], reviews: [], settings: {} };
+      let rootHandle = null;
+      let authenticated = false;
+
+      const $ = (selector) => document.querySelector(selector);
+      const status = (message) => ($("#status").textContent = message);
+      const esc = (value = "") => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
+      const slugify = (value = "") => String(value).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replaceAll("ı", "i").replaceAll("ğ", "g").replaceAll("ü", "u").replaceAll("ş", "s").replaceAll("ö", "o").replaceAll("ç", "c").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "yazi";
+      const imagePreview = (path = "") => path.startsWith("data:") || path.startsWith("http") || path.startsWith("/") ? path : "../" + path;
+      const activeCount = (items) => items.filter((item) => item.active !== false).length;
+      const initialsFromName = (name = "") => String(name).trim().split(/\s+/).slice(0, 2).map((part) => part[0] || "").join("").toUpperCase() || "G";
+      const currentPasswordHash = () => state.settings?.adminPasswordHash || defaultPasswordHash;
+
+      async function sha256(value = "") {
+        const buffer = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(value));
+        return Array.from(new Uint8Array(buffer)).map((byte) => byte.toString(16).padStart(2, "0")).join("");
+      }
+
+      function showLogin(message = "") {
+        $("#loginScreen").classList.remove("hidden");
+        $("#adminShell").classList.add("hidden");
+        $("#loginError").textContent = message;
+      }
+
+      function showAdmin() {
+        authenticated = true;
+        sessionStorage.setItem("conceptdecoorAdminAuth", "1");
+        $("#loginScreen").classList.add("hidden");
+        $("#adminShell").classList.remove("hidden");
+        render();
+      }
+
+      function logout(message = "Çıkış yapıldı. Tekrar giriş için şifre gir.") {
+        authenticated = false;
+        rootHandle = null;
+        sessionStorage.removeItem("conceptdecoorAdminAuth");
+        $("#loginPassword").value = "";
+        showLogin(message);
+        $("#loginPassword").focus();
+      }
+
+      async function loadContent() {
+        try {
+          const response = await fetch(contentUrl, { cache: "no-store" });
+          state = await response.json();
+          state.settings ||= {};
+        } catch (error) {
+          state.settings ||= {};
+        }
+        if (sessionStorage.getItem("conceptdecoorAdminAuth") === "1") {
+          status("İçerik yüklendi.");
+          showAdmin();
+        } else {
+          showLogin();
+        }
+      }
+
+      function renderStats() {
+        $("#heroCount").textContent = activeCount(state.heroSlides || []);
+        $("#projectCount").textContent = activeCount(state.projects || []);
+        $("#blogCount").textContent = activeCount(state.blogPosts || []);
+        $("#reviewCount").textContent = activeCount(state.reviews || []);
+      }
+
+      function renderNav() {
+        document.querySelectorAll(".nav button").forEach((button) => {
+          button.classList.toggle("active", button.dataset.tab === activeTab);
+        });
+      }
+
+      function itemSummary(item) {
+        if (activeTab === "heroSlides") return item.alt || item.image;
+        if (activeTab === "reviews") return item.text;
+        return item.summary || item.description || item.body || "";
+      }
+
+      function itemTitle(item) {
+        return item.title || item.name || "Başlıksız";
+      }
+
+      function renderList() {
+        if (activeTab === "dashboard") return;
+        $("#listTitle").textContent = tabs[activeTab].label;
+        if (activeTab === "settings") {
+          $("#newItem").classList.add("hidden");
+          $("#saveChanges").classList.add("hidden");
+          $("#list").innerHTML = `
+            <article class="item no-image">
+              <div><h3>Giriş şifresi</h3><p>Admin paneline girişte kullanılan şifreyi sağdaki formdan değiştirebilirsin.</p></div>
+            </article>
+            <article class="item no-image">
+              <div><h3>Oturum</h3><p>Bu tarayıcıda açık olan admin oturumunu kapatabilirsin.</p></div>
+            </article>
+          `;
+          return;
+        }
+        $("#newItem").classList.remove("hidden");
+        $("#saveChanges").classList.remove("hidden");
+        const items = state[activeTab] || [];
+        $("#list").innerHTML = items.map((item, index) => {
+          const hasImage = activeTab !== "reviews";
+          return `
+            <article class="item ${hasImage ? "" : "no-image"} ${item.active === false ? "off" : ""}">
+              ${hasImage ? `<img class="thumb" src="${esc(imagePreview(item.image))}" alt="">` : ""}
+              <div><h3>${esc(itemTitle(item))}</h3><p>${esc(itemSummary(item)).slice(0, 130)}</p></div>
+              <div class="item-actions">
+                <button class="iconbtn" type="button" data-action="up" data-index="${index}" title="Yukarı taşı">↑</button>
+                <button class="iconbtn" type="button" data-action="down" data-index="${index}" title="Aşağı taşı">↓</button>
+                <button class="iconbtn" type="button" data-action="edit" data-index="${index}" title="Düzenle">✎</button>
+                <button class="iconbtn" type="button" data-action="toggle" data-index="${index}" title="Aktif/Pasif">${item.active === false ? "○" : "●"}</button>
+                <button class="iconbtn" type="button" data-action="delete" data-index="${index}" title="Sil">×</button>
+              </div>
+            </article>
+          `;
+        }).join("") || `<p class="help" style="padding:14px">Henüz içerik yok.</p>`;
+      }
+
+      function field(name, label, value = "", type = "text") {
+        return `<div class="field"><label for="${name}">${label}</label><input id="${name}" name="${name}" type="${type}" value="${esc(value)}"></div>`;
+      }
+
+      function textarea(name, label, value = "") {
+        return `<div class="field" style="grid-column:1/-1"><label for="${name}">${label}</label><textarea id="${name}" name="${name}">${esc(value)}</textarea></div>`;
+      }
+
+      function seoField(name, label, value = "", max = 60, min = 0) {
+        return `<div class="field" data-counter-field="${name}" data-counter-max="${max}" data-counter-min="${min}"><label for="${name}">${label}<span class="counter" data-counter-for="${name}">0/${max}</span></label><input id="${name}" name="${name}" type="text" value="${esc(value)}"></div>`;
+      }
+
+      function seoTextarea(name, label, value = "", max = 160, min = 0) {
+        return `<div class="field" style="grid-column:1/-1" data-counter-field="${name}" data-counter-max="${max}" data-counter-min="${min}"><label for="${name}">${label}<span class="counter" data-counter-for="${name}">0/${max}</span></label><textarea id="${name}" name="${name}">${esc(value)}</textarea></div>`;
+      }
+
+      function updateSeoTools() {
+        document.querySelectorAll("[data-counter-field]").forEach((wrap) => {
+          const name = wrap.dataset.counterField;
+          const max = Number(wrap.dataset.counterMax || 0);
+          const min = Number(wrap.dataset.counterMin || 0);
+          const input = $(`#${name}`);
+          const counter = document.querySelector(`[data-counter-for="${name}"]`);
+          if (!input || !counter) return;
+          const length = input.value.trim().length;
+          counter.textContent = `${length}/${max}`;
+          counter.classList.toggle("good", length >= min && length <= max);
+          counter.classList.toggle("warn", length > max || (min && length && length < min));
+        });
+        const seoTitle = $("#seoTitle")?.value.trim() || $("#title")?.value.trim() || "Blog başlığı";
+        const seoDescription = $("#seoDescription")?.value.trim() || $("#summary")?.value.trim() || "Arama sonucunda görünecek kısa açıklama.";
+        const slug = slugify($("#slug")?.value || $("#title")?.value || "blog-yazisi");
+        if ($("#seoPreviewTitle")) $("#seoPreviewTitle").textContent = seoTitle;
+        if ($("#seoPreviewDescription")) $("#seoPreviewDescription").textContent = seoDescription;
+        if ($("#seoPreviewUrl")) $("#seoPreviewUrl").textContent = `conceptdecoor.com/blog/${slug}/`;
+      }
+
+      function publicImageUrl(path = "") {
+        if (/^https?:/.test(path)) return path;
+        return `https://conceptdecoor.com/${String(path).replace(/^\/+/, "")}`;
+      }
+
+      function pageImagePath(path = "") {
+        if (/^(https?:|data:)/.test(path)) return path;
+        return `../../${String(path).replace(/^\/+/, "")}`;
+      }
+
+      function articleContentHtml(content = "") {
+        return String(content || "")
+          .split(/\n{2,}/)
+          .filter(Boolean)
+          .map((block) => {
+            const value = block.trim();
+            if (value.startsWith("## ")) return `<h2>${esc(value.slice(3))}</h2>`;
+            return `<p>${esc(value)}</p>`;
+          })
+          .join("");
+      }
+
+      function buildBlogPage(post) {
+        const title = post.title || "Blog yazısı";
+        const seoTitle = post.seoTitle || `${title} | Concept Mobilya Blog`;
+        const finalTitle = seoTitle.includes("Concept Mobilya") ? seoTitle : `${seoTitle} | Concept Mobilya`;
+        const description = post.seoDescription || post.summary || "";
+        const slug = slugify(post.slug || title);
+        const canonical = `https://conceptdecoor.com/blog/${slug}/`;
+        const image = pageImagePath(post.image || "");
+        const schema = {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BlogPosting",
+              "headline": title,
+              "description": description,
+              "image": publicImageUrl(post.image || ""),
+              "author": { "@type": "Organization", "name": "Concept Mobilya" },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Concept Mobilya",
+                "logo": { "@type": "ImageObject", "url": "https://conceptdecoor.com/images/conceptdecoor-logo.png" }
+              },
+              "mainEntityOfPage": canonical,
+              "datePublished": post.datePublished || new Date().toISOString().slice(0, 10),
+              "dateModified": new Date().toISOString().slice(0, 10)
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Ana sayfa", "item": "https://conceptdecoor.com/" },
+                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://conceptdecoor.com/blog/" },
+                { "@type": "ListItem", "position": 3, "name": title, "item": canonical }
+              ]
+            }
+          ]
+        };
+        return `<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>${esc(finalTitle)}</title>
+    <meta name="description" content="${esc(description)}" />
+    ${post.focusKeyword ? `<meta name="keywords" content="${esc(post.focusKeyword)}" />` : ""}
+    <link rel="canonical" href="${esc(canonical)}" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="${esc(finalTitle)}" />
+    <meta property="og:description" content="${esc(description)}" />
+    <meta property="og:url" content="${esc(canonical)}" />
+    <meta property="og:image" content="${esc(publicImageUrl(post.image || ""))}" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="${esc(finalTitle)}" />
+    <meta name="twitter:description" content="${esc(description)}" />
+    <meta name="twitter:image" content="${esc(publicImageUrl(post.image || ""))}" />
+    <script type="application/ld+json">${JSON.stringify(schema).replaceAll("</", "<\\/")}<\/script>
+    <link rel="icon" type="image/png" href="../../images/conceptdecoor-logo.png" />
+    <style>
+      :root{--cream:#f4f1eb;--ink:#151515;--soft:#6f6a62}*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Avenir Next,Manrope,system-ui,sans-serif}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}header{border-bottom:1px solid rgba(0,0,0,.09);background:rgba(244,241,235,.92)}nav{height:76px;max-width:1180px;margin:auto;padding:0 36px;display:flex;align-items:center;justify-content:space-between}.brand-logo{display:inline-flex;align-items:center;gap:10px;font-family:Georgia,serif;font-size:24px;font-weight:600}.brand-mark{width:44px;height:44px;overflow:hidden;border-radius:999px;background:#21150d}.brand-mark img{width:100%;height:100%;object-fit:cover}.menu{display:flex;gap:26px;color:#4d4943;font-size:15px;font-weight:700}.article-wrap{max-width:980px;margin:0 auto;padding:76px 40px 80px}.breadcrumb{font-size:13px;color:rgba(21,21,21,.56);margin:0 0 22px}.article-card{overflow:hidden;border:1px solid rgba(0,0,0,.1);border-radius:12px;background:rgba(255,255,255,.58);box-shadow:0 24px 76px rgba(0,0,0,.08)}.article-card img{width:100%;height:min(430px,48vw);object-fit:cover}.article-body{padding:38px}.article-body h1{font-family:Georgia,serif;font-size:clamp(38px,5vw,68px);line-height:1;margin:0 0 18px}.article-body .summary{font-size:18px;line-height:1.7;color:rgba(21,21,21,.68);margin-bottom:28px}.article-body h2{font-size:22px;margin:30px 0 10px}.article-body p{font-size:16px;line-height:1.82;color:rgba(21,21,21,.68);margin:0 0 16px}.article-cta{display:inline-flex;margin-top:16px;border-radius:999px;background:var(--ink);color:var(--cream);padding:12px 18px;font-size:13px;font-weight:700}.back-link{display:inline-flex;margin-top:24px;font-size:13px;font-weight:700;text-decoration:underline;text-underline-offset:4px}footer{background:#151515;color:#f4f1eb;padding:42px 36px}.foot{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.2fr .7fr 1fr;gap:28px}.foot a{text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(244,241,235,.28)}.logo{font-family:Georgia,serif;font-size:29px;font-weight:600}.foot p{color:rgba(244,241,235,.58);line-height:1.7}@media(max-width:760px){nav{padding:0 20px}.menu{display:none}.article-wrap{padding:52px 20px}.article-card img{height:260px}.article-body{padding:24px 20px 28px}.foot{grid-template-columns:1fr}}
+    </style>
+  </head>
+  <body>
+    <header><nav><a class="brand-logo" href="../../" aria-label="Concept Mobilya ana sayfa"><span class="brand-mark"><img src="../../images/conceptdecoor-logo.png" alt="" width="256" height="256" decoding="async"></span><span>concept mobilya</span></a><div class="menu"><a href="../../hizmetler/">Hizmetler</a><a href="../../#projeler">Projeler</a><a href="../../blog/">Blog</a><a href="../../#sss">SSS</a><a href="../../#iletisim">İletişim</a></div></nav></header>
+    <main><article class="article-wrap"><p class="breadcrumb"><a href="../../">Ana sayfa</a> / <a href="../">Blog</a></p><div class="article-card"><img src="${esc(image)}" alt="${esc(post.alt || title)}" decoding="async" fetchpriority="high"><div class="article-body"><h1>${esc(title)}</h1><p class="summary">${esc(post.summary || description)}</p>${articleContentHtml(post.body || post.summary || "")}<a class="article-cta" href="../../#iletisim">Teklif al</a><br><a class="back-link" href="../">Tüm blog yazıları</a></div></div></article></main>
+    <footer><div class="foot"><div><a class="logo" href="../../">concept mobilya</a><p>Mutfak, banyo, duşakabin ve dolap sistemlerinde ölçüye özel üretim.</p></div><div><a href="../../hizmetler/">Hizmetler</a><br><a href="../../#projeler">Projeler</a><br><a href="../../blog/">Blog</a><br><a href="../../#sss">Sık sorulan sorular</a><br><a href="../../#iletisim">İletişim</a></div><div>Telefon: <a href="tel:+905327043158">0532 704 31 58</a><br>E-posta: info@conceptdecoor.com<br>Adres: Veysel Karani mahallesi Hidayet sokak no 24 Sancaktepe İstanbul</div></div><div style="max-width:1180px;margin:28px auto 0;padding-top:18px;border-top:1px solid rgba(244,241,235,.12);font-size:12px;color:rgba(244,241,235,.52)">Web Tasarım Geliştirme ve Uygulama: <a href="https://avebworks.com/" target="_blank" rel="noreferrer" style="color:rgba(244,241,235,.78);text-decoration:underline;text-underline-offset:4px">avebworks.com</a></div></footer>
+  </body>
+</html>`;
+      }
+
+      function imageFields(item) {
+        return `
+          <div class="field" style="grid-column:1/-1"><label>Görsel yükle</label><input id="imageFile" type="file" accept="image/*"><p class="help">Görsel seçip kaydettiğinde siteye eklenir.</p></div>
+          ${field("image", "Görsel yolu", item.image || "")}
+          ${field("alt", "Alt metin", item.alt || item.title || "")}
+          ${item.image ? `<div class="field" style="grid-column:1/-1"><img class="preview" src="${esc(imagePreview(item.image))}" alt=""></div>` : ""}
+        `;
+      }
+
+      function renderForm() {
+        if (activeTab === "dashboard") return;
+        const item = editIndex >= 0 ? (state[activeTab] || [])[editIndex] : { active: true };
+        $("#formTitle").textContent = editIndex >= 0 ? "Düzenle" : "Yeni " + tabs[activeTab].singular;
+        if (activeTab === "heroSlides") {
+          $("#editor").innerHTML = `
+            <div class="grid">
+              ${field("title", "Başlık / Not", item.title || "")}
+              ${field("alt", "Görsel alt metni", item.alt || item.title || "")}
+              ${imageFields(item)}
+              <label class="check"><input name="active" type="checkbox" ${item.active !== false ? "checked" : ""}> Aktif göster</label>
+            </div>
+            <button class="btn good" type="submit">Kaydet</button>
+          `;
+        } else if (activeTab === "projects") {
+          $("#editor").innerHTML = `
+            <div class="grid">
+              ${field("title", "Başlık", item.title || "")}
+              ${field("description", "Kısa açıklama", item.description || "")}
+              ${imageFields(item)}
+              <label class="check"><input name="active" type="checkbox" ${item.active !== false ? "checked" : ""}> Aktif göster</label>
+            </div>
+            <button class="btn good" type="submit">Kaydet</button>
+          `;
+        } else if (activeTab === "blogPosts") {
+          $("#editor").innerHTML = `
+            <div class="grid">
+              ${field("title", "Yazı başlığı / H1", item.title || "")}
+              ${field("slug", "URL slug", item.slug || slugify(item.title || ""))}
+              ${seoField("seoTitle", "SEO başlığı", item.seoTitle || item.title || "", 62, 45)}
+              ${field("focusKeyword", "Odak anahtar kelime", item.focusKeyword || "")}
+              ${seoTextarea("seoDescription", "Meta açıklama", item.seoDescription || item.summary || "", 160, 120)}
+              ${textarea("summary", "Kartlarda görünecek kısa açıklama", item.summary || "")}
+              ${imageFields(item)}
+              ${textarea("body", "Yazı içeriği", item.body || "")}
+              <p class="help" style="grid-column:1/-1">SEO için başlığı net tut, meta açıklamayı 120-160 karakter aralığında yaz, görsel alt metnine anahtar kelimeyi doğal şekilde ekle. İçerikte boş satır yeni paragraf yapar; ara başlık için satır başına <strong>##</strong> yazabilirsin.</p>
+              <div class="seo-preview" aria-label="Google önizleme">
+                <small id="seoPreviewUrl">conceptdecoor.com/blog/${esc(item.slug || slugify(item.title || "blog-yazisi"))}/</small>
+                <strong id="seoPreviewTitle">${esc(item.seoTitle || item.title || "Blog başlığı")}</strong>
+                <p id="seoPreviewDescription">${esc(item.seoDescription || item.summary || "Arama sonucunda görünecek kısa açıklama.")}</p>
+              </div>
+              <label class="check"><input name="active" type="checkbox" ${item.active !== false ? "checked" : ""}> Aktif göster</label>
+            </div>
+            <button class="btn good" type="submit">Kaydet</button>
+          `;
+          $("#title").addEventListener("input", () => {
+            if (!$("#slug").value || editIndex < 0) $("#slug").value = slugify($("#title").value);
+            if (!$("#seoTitle").value || editIndex < 0) $("#seoTitle").value = $("#title").value;
+            updateSeoTools();
+          });
+          ["slug", "seoTitle", "seoDescription", "summary", "focusKeyword"].forEach((id) => {
+            $(`#${id}`)?.addEventListener("input", updateSeoTools);
+          });
+          updateSeoTools();
+        } else {
+          $("#editor").innerHTML = `
+            <div class="grid">
+              ${field("name", "Yorumu yazan kişi", item.name || "")}
+              <div class="field"><label for="rating">Puan</label><select id="rating" name="rating"><option value="5" ${Number(item.rating || 5) === 5 ? "selected" : ""}>5 yıldız</option><option value="4" ${Number(item.rating) === 4 ? "selected" : ""}>4 yıldız</option><option value="3" ${Number(item.rating) === 3 ? "selected" : ""}>3 yıldız</option></select></div>
+              <div class="field" style="grid-column:1/-1"><label for="text">Google yorumu</label><textarea id="text" name="text" placeholder="Google'daki yorumu buraya olduğu gibi yapıştır.">${esc(item.text || "")}</textarea><p class="help">Yorumu doğal haliyle yazman yeterli. Baş harf ve yıldız görünümü otomatik hazırlanır.</p></div>
+              <label class="check"><input name="active" type="checkbox" ${item.active !== false ? "checked" : ""}> Aktif göster</label>
+            </div>
+            <button class="btn good" type="submit">Kaydet</button>
+          `;
+        }
+        if (activeTab === "settings") {
+          $("#formTitle").textContent = "Ayarlar";
+          $("#editor").innerHTML = `
+            <div class="grid">
+              ${field("currentPassword", "Mevcut şifre", "", "password")}
+              ${field("newPassword", "Yeni şifre", "", "password")}
+              ${field("confirmPassword", "Yeni şifre tekrar", "", "password")}
+              <p class="help" style="grid-column:1/-1">Yeni şifre en az 8 karakter olsun. Kaydettiğinde şifre hash olarak saklanır ve bir sonraki girişte yeni şifre kullanılır.</p>
+            </div>
+            <button class="btn good" type="submit">Şifreyi Kaydet</button>
+            <button class="btn danger" id="logout" type="button">Çıkış Yap</button>
+          `;
+          $("#logout").addEventListener("click", () => {
+            logout();
+          });
+        }
+      }
+
+      function render() {
+        renderNav();
+        renderStats();
+        $("#pageTitle").textContent = tabs[activeTab].label;
+        $("#pageHelp").textContent = tabHelp[activeTab] || "";
+        $("#dashboardPanel").classList.toggle("hidden", activeTab !== "dashboard");
+        $("#workspacePanel").classList.toggle("hidden", activeTab === "dashboard");
+        $("#globalSave").classList.toggle("hidden", activeTab === "dashboard");
+        if (activeTab !== "dashboard") {
+          renderList();
+          renderForm();
+        }
+      }
+
+      async function ensureFolder() {
+        if (rootHandle) return true;
+        if (!window.showDirectoryPicker) {
+          status("Kaydetmek için Chrome üzerinden site klasörüne izin vermen gerekiyor.");
+          return false;
+        }
+        try {
+          rootHandle = await window.showDirectoryPicker({ mode: "readwrite" });
+          status("Site klasörü bağlandı.");
+          return true;
+        } catch (error) {
+          status("Kaydetmek için site klasörünü seçmen gerekiyor.");
+          return false;
+        }
+      }
+
+      async function getUploadsDir() {
+        if (!rootHandle) return null;
+        const images = await rootHandle.getDirectoryHandle("images", { create: true });
+        return images.getDirectoryHandle("uploads", { create: true });
+      }
+
+      async function writeUploadedImage(file) {
+        if (!file) return null;
+        if (!rootHandle && !(await ensureFolder())) return null;
+        const ext = file.name.split(".").pop() || "jpg";
+        const name = `${Date.now()}-${slugify(file.name.replace(/\.[^.]+$/, ""))}.${ext}`;
+        const dir = await getUploadsDir();
+        const handle = await dir.getFileHandle(name, { create: true });
+        const writable = await handle.createWritable();
+        await writable.write(file);
+        await writable.close();
+        return `images/uploads/${name}`;
+      }
+
+      async function formDataToItem() {
+        const form = new FormData($("#editor"));
+        const current = editIndex >= 0 ? { ...(state[activeTab] || [])[editIndex] } : {};
+        const file = $("#imageFile")?.files?.[0];
+        const uploaded = file ? await writeUploadedImage(file) : null;
+        if (activeTab === "heroSlides") {
+          return {
+            ...current,
+            title: form.get("title") || "",
+            image: uploaded || form.get("image") || "",
+            alt: form.get("alt") || form.get("title") || "",
+            active: form.get("active") === "on"
+          };
+        }
+        if (activeTab === "projects") {
+          return {
+            ...current,
+            title: form.get("title") || "",
+            description: form.get("description") || "",
+            image: uploaded || form.get("image") || "",
+            alt: form.get("alt") || form.get("title") || "",
+            active: form.get("active") === "on"
+          };
+        }
+        if (activeTab === "blogPosts") {
+          return {
+            ...current,
+            title: form.get("title") || "",
+            slug: slugify(form.get("slug") || form.get("title") || ""),
+            seoTitle: form.get("seoTitle") || form.get("title") || "",
+            seoDescription: form.get("seoDescription") || form.get("summary") || "",
+            focusKeyword: form.get("focusKeyword") || "",
+            summary: form.get("summary") || "",
+            image: uploaded || form.get("image") || "",
+            alt: form.get("alt") || form.get("title") || "",
+            body: form.get("body") || "",
+            datePublished: current.datePublished || new Date().toISOString().slice(0, 10),
+            active: form.get("active") === "on"
+          };
+        }
+        return {
+          ...current,
+          name: form.get("name") || "",
+          initials: initialsFromName(form.get("name") || ""),
+          rating: Number(form.get("rating") || 5),
+          text: form.get("text") || "",
+          active: form.get("active") === "on"
+        };
+      }
+
+      async function saveJsonToFolder() {
+        if (!rootHandle) return false;
+        const dataDir = await rootHandle.getDirectoryHandle("data", { create: true });
+        const file = await dataDir.getFileHandle("site-content.json", { create: true });
+        const writable = await file.createWritable();
+        await writable.write(JSON.stringify(state, null, 2));
+        await writable.close();
+        await writeBlogPages();
+        return true;
+      }
+
+      async function writeBlogPages() {
+        if (!rootHandle) return;
+        const blogDir = await rootHandle.getDirectoryHandle("blog", { create: true });
+        for (const post of state.blogPosts || []) {
+          if (post.active === false || !post.slug) continue;
+          const postDir = await blogDir.getDirectoryHandle(slugify(post.slug), { create: true });
+          const file = await postDir.getFileHandle("index.html", { create: true });
+          const writable = await file.createWritable();
+          await writable.write(buildBlogPage(post));
+          await writable.close();
+        }
+      }
+
+      async function persistContent() {
+        if (!(await ensureFolder())) return false;
+        await saveJsonToFolder();
+        status(activeTab === "blogPosts" ? "Kaydedildi. Blog SEO sayfası da oluşturuldu." : "Kaydedildi.");
+        return true;
+      }
+
+      function downloadJson() {
+        const blob = new Blob([JSON.stringify(state, null, 2)], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "site-content.json";
+        a.click();
+        URL.revokeObjectURL(url);
+      }
+
+      document.querySelector(".nav").addEventListener("click", (event) => {
+        const button = event.target.closest("button[data-tab]");
+        if (!button) return;
+        activeTab = button.dataset.tab;
+        editIndex = -1;
+        render();
+      });
+
+      $("#dashboardPanel").addEventListener("click", (event) => {
+        const button = event.target.closest("button[data-jump]");
+        if (!button) return;
+        activeTab = button.dataset.jump;
+        editIndex = -1;
+        render();
+      });
+
+      $("#list").addEventListener("click", async (event) => {
+        const button = event.target.closest("button[data-action]");
+        if (!button) return;
+        const index = Number(button.dataset.index);
+        const items = state[activeTab] || [];
+        if (button.dataset.action === "edit") editIndex = index;
+        if (button.dataset.action === "up" && index > 0) {
+          [items[index - 1], items[index]] = [items[index], items[index - 1]];
+        }
+        if (button.dataset.action === "down" && index < items.length - 1) {
+          [items[index + 1], items[index]] = [items[index], items[index + 1]];
+        }
+        if (button.dataset.action === "toggle") items[index].active = items[index].active === false;
+        if (button.dataset.action === "delete") {
+          if (!confirm("Bu içeriği silmek istiyor musun?")) return;
+          items.splice(index, 1);
+        }
+        if (button.dataset.action !== "edit") editIndex = -1;
+        render();
+        if (button.dataset.action !== "edit") {
+          status("Değişiklik panelde yapıldı. Kalıcı olması için Değişiklikleri Kaydet'e bas.");
+        }
+      });
+
+      $("#editor").addEventListener("submit", async (event) => {
+        event.preventDefault();
+        if (activeTab === "settings") {
+          const form = new FormData($("#editor"));
+          const currentPassword = String(form.get("currentPassword") || "");
+          const newPassword = String(form.get("newPassword") || "");
+          const confirmPassword = String(form.get("confirmPassword") || "");
+          if (await sha256(currentPassword) !== currentPasswordHash()) {
+            status("Mevcut şifre yanlış.");
+            return;
+          }
+          if (newPassword.length < 8) {
+            status("Yeni şifre en az 8 karakter olmalı.");
+            return;
+          }
+          if (newPassword !== confirmPassword) {
+            status("Yeni şifreler eşleşmiyor.");
+            return;
+          }
+          state.settings ||= {};
+          const oldHash = currentPasswordHash();
+          state.settings.adminPasswordHash = await sha256(newPassword);
+          try {
+            const saved = await persistContent();
+            if (!saved) {
+              state.settings.adminPasswordHash = oldHash;
+              return;
+            }
+            renderForm();
+            status("Şifre değiştirildi.");
+          } catch (error) {
+            state.settings.adminPasswordHash = oldHash;
+            status("Şifre kaydedilemedi: " + error.message);
+          }
+          return;
+        }
+        const item = await formDataToItem();
+        state[activeTab] ||= [];
+        if (editIndex >= 0) state[activeTab][editIndex] = item;
+        else state[activeTab].push(item);
+        editIndex = -1;
+        render();
+        try {
+          await persistContent();
+        } catch (error) {
+          status("Kaydetme başarısız: " + error.message);
+        }
+      });
+
+      $("#newItem").addEventListener("click", () => { editIndex = -1; renderForm(); });
+      $("#resetForm").addEventListener("click", () => { editIndex = -1; renderForm(); });
+      $("#saveChanges").addEventListener("click", async () => {
+        try {
+          await persistContent();
+        } catch (error) {
+          status("Kaydetme başarısız: " + error.message);
+        }
+      });
+      $("#globalSave").addEventListener("click", async () => {
+        try {
+          await persistContent();
+        } catch (error) {
+          status("Kaydetme başarısız: " + error.message);
+        }
+      });
+
+      $("#loginForm").addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const password = new FormData(event.currentTarget).get("password") || "";
+        if (await sha256(password) === currentPasswordHash()) {
+          $("#loginPassword").value = "";
+          status("İçerik yüklendi.");
+          showAdmin();
+        } else {
+          showLogin("Şifre yanlış.");
+        }
+      });
+
+      $("#sidebarLogout").addEventListener("click", () => logout());
+
+      window.addEventListener("pageshow", () => {
+        if (!sessionStorage.getItem("conceptdecoorAdminAuth")) showLogin();
+      });
+
+      loadContent();
+    </script>
+  </body>
+</html>
