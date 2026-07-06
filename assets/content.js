@@ -141,7 +141,8 @@
     const root = document.querySelector("[data-blog-detail]");
     if (!root) return;
     const params = new URLSearchParams(window.location.search);
-    const slug = params.get("slug");
+    const parts = window.location.pathname.split("/").filter(Boolean);
+    const slug = params.get("slug") || parts[parts.length - 1];
     const post = activeItems(posts).find((item) => item.slug === slug) || activeItems(posts)[0];
     if (!post) return;
     const seoTitle = post.seoTitle || `${post.title} | Concept Mobilya Blog`;
