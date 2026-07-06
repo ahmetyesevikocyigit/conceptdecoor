@@ -265,12 +265,12 @@
         const slug = slugify($("#slug")?.value || $("#title")?.value || "blog-yazisi");
         if ($("#seoPreviewTitle")) $("#seoPreviewTitle").textContent = seoTitle;
         if ($("#seoPreviewDescription")) $("#seoPreviewDescription").textContent = seoDescription;
-        if ($("#seoPreviewUrl")) $("#seoPreviewUrl").textContent = `conceptdecoor.com/blog/${slug}/`;
+        if ($("#seoPreviewUrl")) $("#seoPreviewUrl").textContent = `conceptmobilya.com/blog/${slug}/`;
       }
 
       function publicImageUrl(path = "") {
         if (/^https?:/.test(path)) return path;
-        return `https://conceptdecoor.com/${String(path).replace(/^\/+/, "")}`;
+        return `https://conceptmobilya.com/${String(path).replace(/^\/+/, "")}`;
       }
 
       function pageImagePath(path = "") {
@@ -296,7 +296,7 @@
         const finalTitle = seoTitle.includes("Concept Mobilya") ? seoTitle : `${seoTitle} | Concept Mobilya`;
         const description = post.seoDescription || post.summary || "";
         const slug = slugify(post.slug || title);
-        const canonical = `https://conceptdecoor.com/blog/${slug}/`;
+        const canonical = `https://conceptmobilya.com/blog/${slug}/`;
         const image = pageImagePath(post.image || "");
         const schema = {
           "@context": "https://schema.org",
@@ -310,7 +310,7 @@
               "publisher": {
                 "@type": "Organization",
                 "name": "Concept Mobilya",
-                "logo": { "@type": "ImageObject", "url": "https://conceptdecoor.com/images/conceptdecoor-logo.png" }
+                "logo": { "@type": "ImageObject", "url": "https://conceptmobilya.com/images/conceptdecoor-logo.png" }
               },
               "mainEntityOfPage": canonical,
               "datePublished": post.datePublished || new Date().toISOString().slice(0, 10),
@@ -319,8 +319,8 @@
             {
               "@type": "BreadcrumbList",
               "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Ana sayfa", "item": "https://conceptdecoor.com/" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://conceptdecoor.com/blog/" },
+                { "@type": "ListItem", "position": 1, "name": "Ana sayfa", "item": "https://conceptmobilya.com/" },
+                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://conceptmobilya.com/blog/" },
                 { "@type": "ListItem", "position": 3, "name": title, "item": canonical }
               ]
             }
@@ -406,7 +406,7 @@
               ${textarea("body", "Yazı içeriği", item.body || "")}
               <p class="help" style="grid-column:1/-1">SEO için başlığı net tut, meta açıklamayı 120-160 karakter aralığında yaz, görsel alt metnine anahtar kelimeyi doğal şekilde ekle. İçerikte boş satır yeni paragraf yapar; ara başlık için satır başına <strong>##</strong> yazabilirsin.</p>
               <div class="seo-preview" aria-label="Google önizleme">
-                <small id="seoPreviewUrl">conceptdecoor.com/blog/${esc(item.slug || slugify(item.title || "blog-yazisi"))}/</small>
+                <small id="seoPreviewUrl">conceptmobilya.com/blog/${esc(item.slug || slugify(item.title || "blog-yazisi"))}/</small>
                 <strong id="seoPreviewTitle">${esc(item.seoTitle || item.title || "Blog başlığı")}</strong>
                 <p id="seoPreviewDescription">${esc(item.seoDescription || item.summary || "Arama sonucunda görünecek kısa açıklama.")}</p>
               </div>
