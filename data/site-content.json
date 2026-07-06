@@ -1,0 +1,198 @@
+{
+  "heroSlides": [
+    {
+      "title": "Özel tasarım yaşam alanı",
+      "image": "images/service-gallery/ozel-tasarim-mobilya-2.jpg",
+      "alt": "Özel tasarım dolap, makyaj masası ve yaşam alanı uygulaması",
+      "active": true
+    },
+    {
+      "title": "Aydınlatmalı giyinme alanı",
+      "image": "images/service-gallery/ozel-tasarim-mobilya-3.jpg",
+      "alt": "Aydınlatmalı ayna, çekmece ve cam kapaklı giyinme alanı",
+      "active": true
+    },
+    {
+      "title": "TV ünitesi uygulaması",
+      "image": "images/service-gallery/tv-unitesi-1.jpg",
+      "alt": "Duvar paneli ve alt modüllü özel tasarım TV ünitesi",
+      "active": true
+    },
+    {
+      "title": "LED aydınlatmalı TV ünitesi",
+      "image": "images/service-gallery/tv-unitesi-3.jpg",
+      "alt": "LED aydınlatmalı duvar paneli ve özel ölçü TV ünitesi",
+      "active": true
+    },
+    {
+      "title": "Cam kapaklı gardırop",
+      "image": "images/service-gallery/gardirop-1.jpg",
+      "alt": "Cam kapaklı LED aydınlatmalı gardırop uygulaması",
+      "active": true
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Ayşe K.",
+      "initials": "AK",
+      "rating": 5,
+      "text": "Mutfak dolaplarımızı yaptırdık. Ölçüden montaja kadar ilgilendiler, teslimden sonra da ufak bir ayar için geldiler. Biz memnun kaldık.",
+      "active": true
+    },
+    {
+      "name": "Murat Y.",
+      "initials": "MY",
+      "rating": 5,
+      "text": "Duşakabin için çalıştık. Ölçü alırken detaylı baktılar, montaj günü de temiz çalışıldı. Şimdilik hiçbir sorun yaşamadık.",
+      "active": true
+    },
+    {
+      "name": "Elif D.",
+      "initials": "ED",
+      "rating": 5,
+      "text": "Antre için vestiyer yaptırdık. Öncesinde birkaç kez fikir değiştirdik ama sabırla yardımcı oldular. Son hali gayet kullanışlı oldu.",
+      "active": true
+    },
+    {
+      "name": "Selim A.",
+      "initials": "SA",
+      "rating": 5,
+      "text": "Banyo dolabı ve ayna için tercih ettik. Malzeme konusunda neyin daha mantıklı olduğunu anlattılar. Söyledikleri tarihte işi bitirdiler.",
+      "active": true
+    },
+    {
+      "name": "Nil K.",
+      "initials": "NK",
+      "rating": 5,
+      "text": "Yatak odası gardırobu yaptırdık. İç düzeni gerçekten işimize yaradı, özellikle çekmece ve askı bölümleri iyi planlanmış.",
+      "active": true
+    }
+  ],
+  "blogPosts": [
+    {
+      "slug": "mutfak-dolabi-secerken",
+      "title": "Mutfak dolabı seçerken nelere dikkat edilmeli?",
+      "seoTitle": "Mutfak Dolabı Seçerken Nelere Dikkat Edilmeli?",
+      "seoDescription": "Mutfak dolabı seçerken kapak malzemesi, tezgah uyumu, depolama planı ve ölçüye özel üretimde dikkat edilmesi gerekenleri öğrenin.",
+      "focusKeyword": "mutfak dolabı",
+      "summary": "Kapak malzemesi, tezgah uyumu ve depolama planı birlikte düşünülürse mutfak daha uzun ömürlü olur.",
+      "image": "images/kitchen-cabinets-detail.jpg",
+      "alt": "Ölçüye özel mutfak dolabı seçimi",
+      "body": "Mutfak dolabı sadece kapak renginden ibaret değildir. Günlük kullanım alışkanlığı, tezgah üzerindeki cihazlar, depolama ihtiyacı ve ankastre yerleşimi birlikte düşünülürse mutfak hem daha uzun ömürlü hem daha rahat kullanılır.\n\nYoğun kullanılan mutfaklarda gövde kalitesi, menteşe ve ray sistemi en az kapak yüzeyi kadar önemlidir. Tezgah yüksekliği, ankastre ölçüleri, kiler modülü, köşe dolabı ve çekmece içleri üretimden önce netleşirse mutfakta boşluklar tesadüfen kalmaz.",
+      "datePublished": "2026-07-05",
+      "active": true
+    },
+    {
+      "slug": "dusakabin-olcusu",
+      "title": "Duşakabin ölçüsü nasıl doğru alınır?",
+      "seoTitle": "Duşakabin Ölçüsü Nasıl Doğru Alınır?",
+      "seoDescription": "Duşakabin ölçüsü alırken cam tipi, açılım yönü, seramik bitişi, zemin eğimi ve montaj paylarında dikkat edilmesi gerekenleri inceleyin.",
+      "focusKeyword": "duşakabin ölçüsü",
+      "summary": "Cam tipi, açılım yönü ve seramik bitişleri netleştiğinde montaj süreci daha temiz ilerler.",
+      "image": "images/bathroom-shower.jpg",
+      "alt": "Ölçüye özel duşakabin ölçüsü",
+      "body": "Duşakabin ölçüsü alınırken yalnızca iki duvar arası mesafe yeterli değildir. Seramik bitişleri, zemin eğimi, batarya konumu ve kapı açılım yönü birlikte değerlendirilmelidir.\n\nTemperli cam uygulamalarında birkaç milimetrelik fark bile montaj kalitesini etkileyebilir. Sürgülü, menteşeli veya sabit panel kararında banyonun hareket alanı belirleyici olur.",
+      "datePublished": "2026-07-05",
+      "active": true
+    },
+    {
+      "slug": "gardirop-depolama",
+      "title": "Gardırop içinde depolama nasıl planlanır?",
+      "seoTitle": "Gardırop Depolama Planı Nasıl Yapılır?",
+      "seoDescription": "Gardırop içinde askı, raf, çekmece, kapak düzeni ve LED aydınlatma gibi depolama detaylarını ölçüye özel planlama önerileriyle inceleyin.",
+      "focusKeyword": "gardırop depolama",
+      "summary": "Askı, raf, çekmece ve kapak düzeni ihtiyaca göre kurulduğunda oda daha ferah görünür.",
+      "image": "images/conceptdoor-storage-bedroom-glass.jpg",
+      "alt": "Ölçüye özel gardırop depolama planı",
+      "body": "İyi bir gardırop dışarıdan güzel görünmekle kalmaz, içeride her eşyanın yerini de netleştirir. Askı boyları, katlı kıyafet rafları, çekmece sayısı ve sezonluk depolama alanı baştan planlanmalıdır.\n\nSürgülü kapak dar alanlarda avantaj sağlar. Aynalı kapak odayı daha geniş hissettirebilir. LED aydınlatma ise özellikle derin dolaplarda kullanım konforunu artırır.",
+      "datePublished": "2026-07-05",
+      "active": true
+    },
+    {
+      "slug": "banyo-dolabi-secimi",
+      "title": "Banyo dolabı seçerken nem ve depolama dengesi",
+      "seoTitle": "Banyo Dolabı Seçerken Nelere Dikkat Edilmeli?",
+      "seoDescription": "Banyo dolabı seçerken neme dayanıklı malzeme, lavabo çevresi, çekmece düzeni ve depolama planı için pratik önerileri okuyun.",
+      "focusKeyword": "banyo dolabı",
+      "summary": "Banyo dolabında malzeme, lavabo çevresi ve çekmece düzeni uzun ömürlü kullanım için birlikte planlanır.",
+      "image": "images/bathroom-vanity.jpg",
+      "alt": "Neme dayanıklı banyo dolabı seçimi",
+      "body": "Banyo dolabı seçiminde görünüm kadar neme dayanım da önemlidir. Lavabo altı, ayna çevresi ve çekmece içleri suyla temas ihtimaline göre planlanmalıdır.\n\nHavlu, temizlik ürünü, kişisel bakım ürünü ve günlük kullanılan eşyalar için ayrı alanlar ayrıldığında banyo tezgahı daha sakin kalır.",
+      "datePublished": "2026-07-05",
+      "active": true
+    },
+    {
+      "slug": "tv-unitesi-planlama",
+      "title": "TV ünitesi planlamasında ölçü ve kablo düzeni",
+      "seoTitle": "TV Ünitesi Planlamasında Ölçü ve Kablo Düzeni",
+      "seoDescription": "TV ünitesi tasarımında ekran ölçüsü, priz konumu, kablo geçişleri, cihaz havalandırması ve depolama alanı nasıl planlanmalı?",
+      "focusKeyword": "TV ünitesi",
+      "summary": "TV ölçüsü, priz konumu ve kapaklı depolama doğru çözüldüğünde salon daha sakin görünür.",
+      "image": "images/service-gallery/tv-unitesi-1.jpg",
+      "alt": "Ölçüye özel TV ünitesi planlaması",
+      "body": "TV ünitesi tasarımında ekran ölçüsü, izleme mesafesi, priz konumu ve depolama ihtiyacı birlikte düşünülmelidir. Aksi halde güzel görünen bir ünite günlük kullanımda kablo ve cihaz karmaşası yaratabilir.\n\nModem, oyun konsolu, ses sistemi veya uydu cihazı kullanılacaksa havalandırma ve kablo geçişleri baştan planlanmalıdır.",
+      "datePublished": "2026-07-05",
+      "active": true
+    },
+    {
+      "slug": "vestiyer-portmanto",
+      "title": "Vestiyer ve portmanto ile giriş alanını düzenlemek",
+      "seoTitle": "Vestiyer ve Portmanto ile Giriş Alanı Nasıl Düzenlenir?",
+      "seoDescription": "Vestiyer ve portmanto tasarımında ayakkabı, askı, ayna, anahtar ve günlük eşya düzenini ölçüye özel planlama önerileriyle keşfedin.",
+      "focusKeyword": "vestiyer portmanto",
+      "summary": "Girişte ayakkabı, askı, ayna ve günlük eşya düzeni netleşirse alan hem şık hem pratik olur.",
+      "image": "images/conceptdoor-service-portmanto.jpg",
+      "alt": "Ölçüye özel vestiyer ve portmanto tasarımı",
+      "body": "Evin girişi günlük hayatın en hızlı kullanılan alanlarından biridir. Ayakkabı, mont, çanta, anahtar ve küçük eşyalar için doğru yerler ayrıldığında antre daha düzenli görünür.\n\nKapı açılımı, koridor genişliği ve duvar uzunluğu tasarımın sınırlarını belirler. Kaç kişi kullanacak, günlük kaç çift ayakkabı dışarıda kalıyor, aynaya ihtiyaç var mı gibi sorular tasarımın işlevini netleştirir.",
+      "datePublished": "2026-07-05",
+      "active": true
+    }
+  ],
+  "projects": [
+    {
+      "title": "Modern Antrasit Mutfak",
+      "description": "Mat yüzeyler, gizli kulp detayı ve ankastre uyumlu yerleşim.",
+      "image": "images/hero-showroom.jpg",
+      "alt": "Modern antrasit mutfak",
+      "active": true
+    },
+    {
+      "title": "Cam Duşakabin Uygulaması",
+      "description": "Şeffaf temperli cam, ince siyah profil ve ölçüye özel montaj.",
+      "image": "images/bathroom-shower.jpg",
+      "alt": "Cam duşakabin uygulaması",
+      "active": true
+    },
+    {
+      "title": "Banyo Dolabı & Ayna",
+      "description": "Taş dokulu tezgah, geniş çekmece ve aydınlatmalı ayna hissi.",
+      "image": "images/bathroom-vanity.jpg",
+      "alt": "Banyo dolabı ve ayna",
+      "active": true
+    },
+    {
+      "title": "Vestiyer Sistemi",
+      "description": "Antreye göre tasarlanmış açık raf, askılık ve kapalı depolama.",
+      "image": "images/storage-wardrobe.jpg",
+      "alt": "Vestiyer sistemi",
+      "active": true
+    },
+    {
+      "title": "Ahşap Dokulu Mutfak",
+      "description": "Açık ahşap kapaklar, sıcak LED çizgisi ve yalın tezgah.",
+      "image": "images/hero-showroom.jpg",
+      "alt": "Ahşap dokulu mutfak",
+      "active": true
+    },
+    {
+      "title": "Sürgülü Gardırop",
+      "description": "Yerden tavana depolama, çizgisel kapaklar ve sakin iç düzen.",
+      "image": "images/storage-wardrobe.jpg",
+      "alt": "Sürgülü gardırop",
+      "active": true
+    }
+  ],
+  "settings": {
+    "adminPasswordHash": "122f51af686b46c88122e03bd8ca568ac2cab408aa2094dc95f1f87f4a7fd6b4"
+  }
+}
