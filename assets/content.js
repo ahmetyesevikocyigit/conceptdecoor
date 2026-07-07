@@ -68,6 +68,14 @@
     if (!slider) return;
     const items = activeItems(slides);
     if (!items.length) return;
+    const targetImages = items.map((slide) => imageSrc(slide.image));
+    const currentImages = [...slider.querySelectorAll(":scope > img")].map((image) => image.getAttribute("src") || "");
+    if (
+      currentImages.length === targetImages.length &&
+      currentImages.every((image, index) => image === targetImages[index])
+    ) {
+      return;
+    }
     const images = items.map((slide, index) => `
       <img class="${index === 0 ? "active" : ""}" src="${escapeHtml(imageSrc(slide.image))}" alt="${escapeHtml(index === 0 ? slide.alt || slide.title || "" : "")}" data-alt="${escapeHtml(slide.alt || slide.title || "")}" ${index === 0 ? 'decoding="async" fetchpriority="high"' : 'aria-hidden="true" loading="lazy" decoding="async"'}>
     `).join("");
@@ -106,7 +114,7 @@
     wrap.innerHTML = items.map((post) => `
       <article class="blog-card">
         <img src="${escapeHtml(imageSrc(post.image))}" alt="${escapeHtml(post.alt || post.title)}" loading="lazy" decoding="async">
-        <div><h3>${escapeHtml(post.title)}</h3><p>${escapeHtml(post.summary)}</p><a href="${escapeHtml(`blog/${post.slug}/`)}">Devamını oku</a></div>
+        <div><h3>${escapeHtml(post.title)}</h3><p>${escapeHtml(post.summary)}</p><a href="${escapeHtml(`blog/${post.slug}/`)}" aria-label="${escapeHtml(post.title)} yazısını oku">Devamını oku</a></div>
       </article>
     `).join("");
   }
@@ -132,7 +140,7 @@
     wrap.innerHTML = items.map((post, index) => `
       <article class="blog-card">
         <img src="${escapeHtml(imageSrc(post.image))}" alt="${escapeHtml(post.alt || post.title)}" ${index ? 'loading="lazy"' : 'fetchpriority="high"'} decoding="async">
-        <div><h2>${escapeHtml(post.title)}</h2><p>${escapeHtml(post.summary)}</p><a href="${escapeHtml(blogUrl(post, true))}">Devamını oku</a></div>
+        <div><h2>${escapeHtml(post.title)}</h2><p>${escapeHtml(post.summary)}</p><a href="${escapeHtml(blogUrl(post, true))}" aria-label="${escapeHtml(post.title)} yazısını oku">Devamını oku</a></div>
       </article>
     `).join("");
   }
